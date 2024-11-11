@@ -4,7 +4,7 @@ import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
 import corpcommentImg from "@/public/corpcomment.png";
 import rmtdevImg from "@/public/rmtdev.png";
-import wordanalyticsImg from "@/public/wordanalytics.png";
+//import wordanalyticsImg from "@/public/wordanalytics.png";
 
 export const links = [
   {
@@ -35,28 +35,38 @@ export const links = [
 
 export const experiencesData = [
   {
-    title: "Self studying with SuperSimpleDev",
-    location: "Seoul, South Korea",
+    title: "Graduated from Moscow State University of Management",
+    location: "Moscow, Russia",
     description:
-      "Have finished HTML, CSS and JavaScript courses after 6 months of studying.",
+      "Bachelor degree in Government and Municipal Management",
     icon: React.createElement(LuGraduationCap),
-    date: "2023",
+    date: "2018",
   },
   {
-    title: "Front-End Developer",
-    location: "Seoul, South Korea",
+    title: "UNIQLO Career Path",
+    location: "Saint-Petersburg, Russia",
     description:
-      "I worked in a Korean cosmetics field and was simultaneously learning different frameworks and upgrading my coding skills",
+      "Started my career as a part timer. Through 7 years of work got promoted from Seller-Cashier to a Store Manager position.",
     icon: React.createElement(CgWorkAlt),
-    date: "Late 2023",
+    date: "2014-2022",
   },
+
   {
-    title: "Front-End Developer",
+    title: "Career Change and Front-End Skill Development",
     location: "Seoul, South Korea",
     description:
-      "I'm now an uprising front-end developer with a stack that includes React, Next.js, TypeScript, Tailwind, MongoDB and Vercel. I'm open to full-time opportunities.",
+      "Relocated to South Korea, motivated by personal and family considerations. During this transition, I focused on adjusting to my new life and took courses to develop my skills in front-end development, setting myself up for a new career path in web development.",
     icon: React.createElement(FaReact),
-    date: "2024 - present",
+    date: "2022 - 2023",
+  },
+
+  {
+    title: "K-Beauty and career at DINSO and HINATURE",
+    location: "Seoul, South Korea",
+    description:
+      "Have worked in the Korean cosmetics industry while simultaneously learning various frameworks and enhancing my coding skills.",
+    icon: React.createElement(FaReact),
+    date: "2023 - 2024",
   },
 ] as const;
 
@@ -64,23 +74,16 @@ export const projectsData = [
   {
     title: "Amazon Clone Project",
     description:
-      "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
-    tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma"],
+      "This project is a full-featured Amazon clone website, built to showcase e-commerce functionality. Through this project, I trained my skills in JavaScript, HTML, CSS, and Object-Oriented Programming (OOP).",
+    tags: ["JavaScript", "HTML", "CSS", "OOP"],
     imageUrl: corpcommentImg,
   },
   {
     title: "Clothing B2B EC Platform",
     description:
-      "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
-    tags: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
+      "Platform that's tailored for the clothing industry, focusing on the unique needs of business-to-business transactions.",
+    tags: ["React", "TypeScript", "Next.js", "Tailwind", "SupaBase"],
     imageUrl: rmtdevImg,
-  },
-  {
-    title: "Word Analytics",
-    description:
-      "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
-    tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
-    imageUrl: wordanalyticsImg,
   },
 ];
 
