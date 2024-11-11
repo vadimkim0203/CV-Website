@@ -33,13 +33,13 @@ export default function Intro () {
               duration: 0.2,
             }}>
             <Image 
-            src="https://raw.githubusercontent.com/vadimkim0203/cv-website-project/refs/heads/main/assets/me.png" 
+            src="https://github.com/vadimkim0203/cv-website-project/blob/main/assets/vadimkimcvphoto2.png?raw=true" 
             alt="Vadim Kim personal photo"
             width="192"
             height="192"
             quality={95}
             priority={true}
-            className='h-24 w-24 rounded-full object-cover border-[0.25rem] border-white shadow-xl'
+            className='h-36 w-36 rounded-full object-cover border-[0.25rem] border-white shadow-xl'
             />
           </motion.div>
 
@@ -52,7 +52,7 @@ export default function Intro () {
               delay: 0.1,
               duration: 0.7,
             }}>
-              🤙
+              👋
             </motion.span>
         </div>
       </div>

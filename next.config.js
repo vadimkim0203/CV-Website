@@ -10,6 +10,11 @@ const nextConfig = {
         protocol:"https",
         hostname: 'scontent-ssn1-1.cdninstagram.com',
       },
+      {
+        protocol: 'https',
+        hostname: 'github.com',
+        pathname: '/vadimkim0203/cv-website-project/**'
+      },
     ],
   },
   experimental: {
