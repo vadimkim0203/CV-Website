@@ -1,6 +1,6 @@
 "use client"
 
-import React, {useState, createContext, useContext} from "react"
+import React, { useState, createContext, useContext } from "react"
 import type { SectionName } from "@/lib/types";
 
 
@@ -9,7 +9,7 @@ type ActiveSectionContextProviderProps = {
 };
 
 type ActiveSectionContextType = {
-  activeSection: SectionName; 
+  activeSection: SectionName;
   setActiveSection: React.Dispatch<React.SetStateAction<SectionName>>;
   timeOfLastClick: number;
   setTimeOfLastClick: React.Dispatch<React.SetStateAction<number>>;
@@ -19,20 +19,20 @@ export const ActiveSectionContext = createContext<ActiveSectionContextType | nul
 
 export default function ActiveSectionContextProvider({
   children
-} : ActiveSectionContextProviderProps) {
+}: ActiveSectionContextProviderProps) {
   const [activeSection, setActiveSection] = useState<SectionName>("Home");
   const [timeOfLastClick, setTimeOfLastClick] = useState(0); //disables the observer when user skips any sections 
 
   return (<ActiveSectionContext.Provider
-  value={{
-    activeSection,
-    setActiveSection,
-    timeOfLastClick,
-    setTimeOfLastClick
-  }}>{children}</ActiveSectionContext.Provider>);
+    value={{
+      activeSection,
+      setActiveSection,
+      timeOfLastClick,
+      setTimeOfLastClick
+    }}>{children}</ActiveSectionContext.Provider>);
 }
 
-export function useActiveSectionContext(){
+export function useActiveSectionContext() {
   const context = useContext(ActiveSectionContext);
 
   if (context === null) {
