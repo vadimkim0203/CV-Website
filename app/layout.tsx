@@ -26,10 +26,10 @@ export default function RootLayout({
         <div className='bg-[#a3b4cc] absolute -z-10 top-[-6rem] left-[-35rem] h-[31.25rem] w-[50rem] rounded-full blur-[10rem] sm:w-[68.7rem] md:left-[-33rem] lg:left-[-28rem] xl:left-[15rem] 2xl:left-[-5rem] dark:bg-[#2b3b51]'></div>
         <ThemeContextProvider>
           <ActiveSectionContextProvider>
-            <Header/>
+            <Header />
             {children}
-            <Footer/>
-            <ThemeSwitch/>
+            <Footer />
+            <ThemeSwitch />
           </ActiveSectionContextProvider>
         </ThemeContextProvider>
       </body>
