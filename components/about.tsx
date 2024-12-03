@@ -21,7 +21,7 @@ export default function About() {
       <SectionHeading>About Me</SectionHeading>
       <p>
         After graduating with a degree in{" "}
-        <span className="font-medium">Government and Municipal Management</span>, I spent 7 years at Uniqlo, working my way up to{" "}
+        <span className="font-medium">Political science</span>, I spent 7 years at Uniqlo, working my way up to{" "}
         <span className="font-bold">store manager</span>. Later, I moved into the{" "}
         <span className="font-medium">Korean skincare industry as a sales manager</span>, where I discovered an interest in web development. While working in cosmetics, I{" "}
         <span className="italic">started learning to code</span> and completed multiple free courses and bootcamps.{" "}
