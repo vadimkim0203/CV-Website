@@ -4,6 +4,7 @@ import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
 import corpcommentImg from "@/public/corpcomment.png";
 import rmtdevImg from "@/public/rmtdev.png";
+import expensetracker from "@/public/expensetracker.png"
 //import wordanalyticsImg from "@/public/wordanalytics.png";
 
 export const links = [
@@ -84,6 +85,13 @@ export const projectsData = [
       "Platform that's tailored for the clothing industry, focusing on the unique needs of business-to-business transactions.",
     tags: ["React", "TypeScript", "Next.js", "Tailwind", "SupaBase"],
     imageUrl: rmtdevImg,
+  },
+  {
+    title: "Incomes and expenses tracker",
+    description:
+      "This tracker helps you to manage your income and expenses. All data is saved to the local storage which makes this tool convenient and usable.",
+    tags: ["VueJS", "JavaScript", "CSS", "Vue Toastification"],
+    imageUrl: expensetracker,
   },
 ];
 
