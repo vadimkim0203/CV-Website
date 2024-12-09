@@ -84,7 +84,7 @@ export const projectsData = [
     title: "Clothing B2B EC Platform",
     description:
       "Platform that's tailored for the clothing industry, focusing on the unique needs of business-to-business transactions.",
-    tags: ["React", "TypeScript", "Next.js", "Tailwind", "SupaBase"],
+    tags: ["ReactJS", "TypeScript", "Next.js", "Tailwind", "SupaBase"],
     imageUrl: rmtdevImg,
   },
   {
@@ -97,8 +97,8 @@ export const projectsData = [
   {
     title: "Pocket WiFi plan page",
     description:
-      "The first freelance project for a small Korean data provider",
-    tags: ["React", "JavaScript", "CSS"],
+      "The first freelance project for a small Korean data provider. Built with ReactJS custom components, this website provides all the necessary information regarding provider's plans.",
+    tags: ["ReactJS", "JavaScript", "CSS"],
     imageUrl: pocketwifi,
   },
 ];
