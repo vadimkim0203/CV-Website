@@ -5,6 +5,7 @@ import { LuGraduationCap } from "react-icons/lu";
 import corpcommentImg from "@/public/corpcomment.png";
 import rmtdevImg from "@/public/rmtdev.png";
 import expensetracker from "@/public/expensetracker.png"
+import pocketwifi from "@/public/pocketwifi.png"
 //import wordanalyticsImg from "@/public/wordanalytics.png";
 
 export const links = [
@@ -92,6 +93,13 @@ export const projectsData = [
       "This tracker helps you to manage your income and expenses. All data is saved to the local storage which makes this tool convenient and usable.",
     tags: ["VueJS", "JavaScript", "CSS", "Vue Toastification"],
     imageUrl: expensetracker,
+  },
+  {
+    title: "Pocket WiFi plan page",
+    description:
+      "The first freelance project for a small Korean data provider",
+    tags: ["React", "JavaScript", "CSS"],
+    imageUrl: pocketwifi,
   },
 ];
 
