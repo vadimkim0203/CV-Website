@@ -5,7 +5,9 @@ import { LuGraduationCap } from "react-icons/lu";
 import corpcommentImg from "@/public/corpcomment.png";
 import rmtdevImg from "@/public/rmtdev.png";
 import expensetracker from "@/public/expensetracker.png"
-import pocketwifi from "@/public/pocketwifi.png"
+import pocketwifi from "@/public/pocketwifi.png";
+import tictactoe from "@/public/tictactoe.png";
+import investmentcalculator from "@/public/investmentcalc.png";
 //import wordanalyticsImg from "@/public/wordanalytics.png";
 
 export const links = [
@@ -97,9 +99,23 @@ export const projectsData = [
   {
     title: "Pocket WiFi plan page",
     description:
-      "The first freelance project for a small Korean data provider. Built with ReactJS custom components, this website provides all the necessary information regarding provider's plans.",
+      "First freelance project for a small Korean data provider. Built with ReactJS custom components, this website provides all the necessary information regarding provider's plans.",
     tags: ["ReactJS", "JavaScript", "CSS"],
     imageUrl: pocketwifi,
+  },
+  {
+    title: "Tic-Tac-Toe Game",
+    description:
+      "A simple Tic-Tac-Toe game built using the React framework and such concepts as immutability, 2 way data binding and lifting states.",
+    tags: ["ReactJS", "JavaScript", "CSS"],
+    imageUrl: tictactoe,
+  },
+  {
+    title: "Investment Calculator",
+    description:
+      "A web application built with ReactJS that helps users calculate potential returns on their investments.",
+    tags: ["ReactJS", "JavaScript", "CSS"],
+    imageUrl: investmentcalculator,
   },
 ];
 
