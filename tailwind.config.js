@@ -4,7 +4,8 @@ module.exports = {
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/**/*.{html,js}",
+    "./lib/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/**/*.{js,ts,jsx,tsx,html}",
   ],
   theme: {
     extend: {
@@ -17,4 +18,12 @@ module.exports = {
   },
   plugins: [],
   darkMode: "class",
+  safelist: [
+    'bg-blue-200',
+    'bg-green-200',
+    'bg-yellow-200',
+    'bg-purple-200',
+    'bg-pink-200',
+    'bg-orange-200',
+  ]
 };
