@@ -23,12 +23,12 @@ export default function About() {
         After graduating with a degree in{" "}
         <span className="font-medium">Political science</span>, I spent 7 years at Uniqlo, working my way up to{" "}
         <span className="font-bold">store manager</span>. Later, I moved into the{" "}
-        <span className="font-medium">Korean skincare industry as a sales manager</span>, where I discovered an interest in web development. While working in cosmetics, I{" "}
+        <span className="font-medium">Korean skincare industry as a sales manager</span>, where I discovered an interest in web development. I{" "}
         <span className="italic">started learning to code</span> and completed multiple free courses and bootcamps.{" "}
         <span className="italic">My favorite part of programming</span> is the problem-solving aspect. I{" "}
         <span className="underline">love</span> the feeling of finally figuring out a solution to a problem. My core stack includes{" "}
-        <span className="font-medium">React, Next.js, Node.js, and MongoDB</span>. I am also familiar with TypeScript and Prisma, and I am always looking to learn new technologies.{" "}
-        <span className="font-medium">I am currently seeking a full-time position as a software developer</span> to continue building my skills and experience.
+        <span className="font-medium">TypeScript, TailwindCSS and Docker </span>. I am also familiar with NextJS and Supabase, and I am always looking to learn new technologies.{" "}
+        <span className="font-medium">I am currently seeking a full-time position as a frontend developer</span> to continue building my skills and experience.
       </p>
 
 
