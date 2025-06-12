@@ -1,25 +1,29 @@
+const createNextIntlPlugin = require('next-intl/plugin');
+
+const withNextIntl = createNextIntlPlugin();
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
     remotePatterns: [
       {
-        protocol:"https",
+        protocol: 'https',
         hostname: 'raw.githubusercontent.com',
       },
       {
-        protocol:"https",
+        protocol: 'https',
         hostname: 'scontent-ssn1-1.cdninstagram.com',
       },
       {
         protocol: 'https',
         hostname: 'github.com',
-        pathname: '/vadimkim0203/cv-website-project/**'
+        pathname: '/vadimkim0203/cv-website-project/**',
       },
     ],
   },
   experimental: {
-    serverActions:{},
+    serverActions: {},
   },
 };
 
-module.exports = nextConfig
+module.exports = withNextIntl(nextConfig);
