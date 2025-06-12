@@ -20,10 +20,7 @@ export default function About() {
       id="about"
     >
       <SectionHeading>About Me</SectionHeading>
-      <div className="flex items-center space-x-2">
-        <Switch id="airplane-mode" />
-        <Label htmlFor="airplane-mode">Airplane Mode</Label>
-      </div>
+
       <p>
         After graduating with a degree in{' '}
         <span className="font-medium">Political science</span>, I spent 7 years

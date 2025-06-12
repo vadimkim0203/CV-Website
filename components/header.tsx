@@ -6,8 +6,6 @@ import { links } from '@/lib/data';
 import Link from 'next/link';
 import clsx from 'clsx';
 import { useActiveSectionContext } from '@/context/active-section-context';
-import { Switch } from './ui/switch';
-import { Label } from './ui/label';
 import {
   Select,
   SelectContent,
@@ -17,30 +15,14 @@ import {
   SelectTrigger,
   SelectValue,
 } from './ui/select';
+import { Languages } from 'lucide-react';
 
 export default function Header() {
   const { activeSection, setActiveSection, setTimeOfLastClick } =
     useActiveSectionContext();
 
   return (
-    <header className="z-[999] relative">
-      <div className="flex items-center space-x-2">
-        <Select>
-          <SelectTrigger className="w-[180px]">
-            <SelectValue placeholder="Select a fruit" />
-          </SelectTrigger>
-          <SelectContent>
-            <SelectGroup>
-              <SelectLabel>Fruits</SelectLabel>
-              <SelectItem value="apple">English</SelectItem>
-              <SelectItem value="banana">Korean</SelectItem>
-            </SelectGroup>
-          </SelectContent>
-        </Select>
-        <Switch id="airplane-mode" className="bg-gray-300" />
-        <Label htmlFor="airplane-mode">Airplane Mode</Label>
-      </div>
-
+    <header className="z-[999] relative ">
       <motion.div
         className="fixed top-0 left-1/2 h-[4.5rem] w-full rounded-none border border-white border-opacity-40 bg-white bg-opacity-80 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] sm:top-6 sm:h-[3.25rem] sm:w-[36rem] sm:rounded-full dark:bg-gray-950 dark:border-black/40 dark:bg-opacity-75"
         initial={{ y: -100, x: '-50%', opacity: 0 }}
@@ -88,6 +70,30 @@ export default function Header() {
           ))}
         </ul>
       </nav>
+      <div className="fixed top-8 right-2 z-[9999] ">
+        <Select>
+          <SelectTrigger className="w-[140px] hover:cursor-pointer">
+            <Languages className="mr-2 h-4 w-4 " />
+            <SelectValue placeholder="Languages" />
+          </SelectTrigger>
+          <SelectContent
+            className="z-[9999]"
+            position="popper"
+            side="bottom"
+            sideOffset={5}
+            style={{position:'fixed'}}
+          >
+            <SelectGroup>
+              <SelectItem value="en" className="cursor-pointer">
+                English
+              </SelectItem>
+              <SelectItem value="kr" className="cursor-pointer">
+                Korean
+              </SelectItem>
+            </SelectGroup>
+          </SelectContent>
+        </Select>
+      </div>
     </header>
   );
 }
