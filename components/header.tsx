@@ -6,16 +6,18 @@ import { links } from '@/lib/data';
 import Link from 'next/link';
 import clsx from 'clsx';
 import { useActiveSectionContext } from '@/context/active-section-context';
-import {
-  Select,
-  SelectContent,
-  SelectGroup,
-  SelectItem,
-  SelectLabel,
-  SelectTrigger,
-  SelectValue,
-} from './ui/select';
-import { Languages } from 'lucide-react';
+// import {
+//   Select,
+//   SelectContent,
+//   SelectGroup,
+//   SelectItem,
+//   SelectLabel,
+//   SelectTrigger,
+//   SelectValue,
+// } from './ui/select';
+// import { Languages } from 'lucide-react';
+import LanguageSelector from './locale/LanguageSelector';
+import LanguageSelectorPortal from './locale/LanguageSelectorPortal';
 
 export default function Header() {
   const { activeSection, setActiveSection, setTimeOfLastClick } =
@@ -70,30 +72,7 @@ export default function Header() {
           ))}
         </ul>
       </nav>
-      <div className="fixed top-8 right-2 z-[9999] ">
-        <Select>
-          <SelectTrigger className="w-[140px] hover:cursor-pointer">
-            <Languages className="mr-2 h-4 w-4 " />
-            <SelectValue placeholder="Languages" />
-          </SelectTrigger>
-          <SelectContent
-            className="z-[9999]"
-            position="popper"
-            side="bottom"
-            sideOffset={5}
-            style={{position:'fixed'}}
-          >
-            <SelectGroup>
-              <SelectItem value="en" className="cursor-pointer">
-                English
-              </SelectItem>
-              <SelectItem value="kr" className="cursor-pointer">
-                Korean
-              </SelectItem>
-            </SelectGroup>
-          </SelectContent>
-        </Select>
-      </div>
+      <LanguageSelectorPortal/>
     </header>
   );
 }
