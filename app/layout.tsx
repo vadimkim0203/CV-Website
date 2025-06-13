@@ -1,4 +1,4 @@
-import '../styles/globals.css';
+import './styles/globals.css';
 import { Inter } from 'next/font/google';
 import Header from '@/components/header';
 import ActiveSectionContextProvider from '@/context/active-section-context';
@@ -6,8 +6,10 @@ import Footer from '@/components/footer';
 import ThemeSwitch from '@/components/theme-switch';
 import ThemeContextProvider from '@/context/theme-context';
 import { NextIntlClientProvider, hasLocale } from 'next-intl';
-import { routing } from '../../src/i18n/routing';
+import { routing } from '../src/i18n/routing';
 import { notFound } from 'next/navigation';
+import { headers } from 'next/headers';
+import { getMessages } from 'next-intl/server';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -18,15 +20,17 @@ export const metadata = {
 
 export default async function RootLayout({
   children,
-  params,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-  params: Promise<{ locale: string }>;
-}>) {
-  const { locale } = await params;
-  if (!hasLocale(routing.locales, locale)) {
-    notFound();
-  }
+}) {
+   const headersList = await headers();
+  const requestedLocale: string = headersList.get('accept-language')?.split(',')[0]?.split('-')[0] || 'en';
+
+  const locale = hasLocale(routing.locales, requestedLocale)
+  ? (requestedLocale as typeof routing.locales[number])
+  : routing.defaultLocale;
+
+  const messages = await getMessages({ locale });
   return (
     <html lang={locale} className="!scroll-smooth">
       <NextIntlClientProvider>
