@@ -6,10 +6,11 @@ import { motion } from 'framer-motion';
 import { useSectionInView } from '@/lib/hooks';
 import { Switch } from './ui/switch';
 import { Label } from './ui/label';
+import { useTranslations } from 'next-intl';
 
 export default function About() {
   const { ref } = useSectionInView('About');
-
+  const t = useTranslations('about');
   return (
     <motion.section
       ref={ref}
@@ -19,40 +20,27 @@ export default function About() {
       transition={{ delay: 0.175 }}
       id="about"
     >
-      <SectionHeading>About Me</SectionHeading>
+      <SectionHeading>{t('title')}</SectionHeading>
 
       <p>
-        After graduating with a degree in{' '}
-        <span className="font-medium">Political science</span>, I spent 7 years
-        at Uniqlo, working my way up to{' '}
-        <span className="font-bold">store manager</span>. Later, I moved into
-        the{' '}
-        <span className="font-medium">
-          Korean skincare industry as a sales manager
-        </span>
-        , where I discovered an interest in web development. I{' '}
-        <span className="italic">started learning to code</span> and completed
-        multiple free courses and bootcamps.{' '}
-        <span className="italic">My favorite part of programming</span> is the
-        problem-solving aspect. I <span className="underline">love</span> the
-        feeling of finally figuring out a solution to a problem. My core stack
-        includes{' '}
-        <span className="font-medium">TypeScript, TailwindCSS and Docker </span>
-        . I am also familiar with NextJS and Supabase, and I am always looking
-        to learn new technologies.{' '}
-        <span className="font-medium">
-          I am currently seeking a full-time position as a frontend developer
-        </span>{' '}
-        to continue building my skills and experience.
+        {t.rich('paragraph1', {
+          degree: (chunks) => <span className="font-medium">{chunks}</span>,
+          position: (chunks) => <span className="font-bold">{chunks}</span>,
+          industry: (chunks) => <span className="font-medium">{chunks}</span>,
+          learning: (chunks) => <span className="italic">{chunks}</span>,
+          favorite: (chunks) => <span className="italic">{chunks}</span>,
+          love: (chunks) => <span className="underline">{chunks}</span>,
+          stack: (chunks) => <span className="font-medium">{chunks}</span>,
+          seeking: (chunks) => <span className="font-medium">{chunks}</span>,
+        })}
       </p>
 
       <p>
-        <span className="italic">When I'm not coding</span>, I love listening to
-        music 🎼, traveling the world 🌎, and exploring new culinary concepts
-        🍣. I also enjoy{' '}
-        <span className="font-medium">learning new things</span> and am
-        currently diving into{' '}
-        <span className="font-medium">fashion and design</span>.
+        {t.rich('paragraph2', {
+          notCoding: (chunks) => <span className="italic">{chunks}</span>,
+          learning: (chunks) => <span className="font-medium">{chunks}</span>,
+          studying: (chunks) => <span className="font-medium">{chunks}</span>,
+        })}
       </p>
     </motion.section>
   );

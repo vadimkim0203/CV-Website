@@ -1,0 +1,26 @@
+{
+  "nav": {
+    "Home": "홈",
+    "About": "소개",
+    "Projects": "프로젝트",
+    "Skills": "기술",
+    "Experience": "경력",
+    "Contact": "연락처"
+  },
+  "intro": {
+    "line1": "<bold>안녕하세요! 제 이름은 김바딤입니다.</bold> 저는 <bold>리테일과 B2B 서비스</bold>에서의 탄탄한 경험을 바탕으로 한 <bold>프론트엔드 개발자</bold>입니다.",
+    "line2": "저는 <italic>사용자의 니즈를 이해하고, 문제를 해결하며, 실용적인 솔루션을 제공하는 데 능숙합니다</italic>.",
+    "line3": "주로 <underline>TypeScript, NextJS</underline>와 Tailwind CSS를 사용합니다.",
+    "contactButton": "연락하기",
+    "downloadCvButton": "이력서 다운로드"
+  },
+  "about": {
+    "title": "소개",
+    "paragraph1": "대학에서 <degree>정치학</degree>을 전공한 후, 유니클로에서 7년간 근무하며 <position>매장 매니저</position>까지 올라갔습니다. 이후 <industry>한국 스킨케어 업계에서 세일즈 매니저</industry>로 일하면서 웹 개발에 관심을 갖게 되었습니다. <learning>코딩을 배우기 시작했고</learning> 여러 무료 강의와 부트캠프를 완료했습니다. <favorite>프로그래밍에서 가장 좋아하는 부분은</favorite> 문제 해결 과정입니다. 문제의 해결책을 찾았을 때의 그 기분을 <love>정말 좋아합니다</love>. 제 핵심 기술 스택은 <stack>TypeScript, TailwindCSS, Docker</stack>입니다. NextJS와 Supabase에도 익숙하며, 항상 새로운 기술을 배우려고 노력하고 있습니다. <seeking>현재 프론트엔드 개발자로서 풀타임 포지션을 찾고 있으며</seeking> 제 스킬과 경험을 계속 쌓아가고 싶습니다.",
+    "paragraph2": "<notCoding>코딩을 하지 않을 때는</notCoding> 음악 듣기 🎼, 세계 여행 🌎, 새로운 요리 컨셉 탐구 🍣를 즐깁니다. 또한 <learning>새로운 것을 배우는 것</learning>을 좋아하며, 현재는 <studying>패션과 디자인</studying>을 공부하고 있습니다."
+  },
+  "contact": {
+    "Header": "자기소개",
+    "Please": "연락처"
+  }
+}

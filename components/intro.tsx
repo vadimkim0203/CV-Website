@@ -9,10 +9,12 @@ import { HiDownload } from 'react-icons/hi';
 import { FaGithubSquare } from 'react-icons/fa';
 import { useSectionInView } from '@/lib/hooks';
 import { useActiveSectionContext } from '@/context/active-section-context';
+import { useTranslations } from 'next-intl';
 
 export default function Intro() {
   const { ref } = useSectionInView('Home', 0.5);
   const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
+  const t = useTranslations('intro');
 
   return (
     <section
@@ -62,17 +64,16 @@ export default function Intro() {
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <span className="font-bold">Hi there! My name is Vadim.</span> I'm a{' '}
-        <span className="font-bold">frontend developer backed </span> by a
-        strong foundation{' '}
-        <span className="font-bold">in retail and B2B service.</span> Skilled in
-        understanding{' '}
-        <span className="italic">
-          user needs, solving problems, and delivering practical solutions
-        </span>
-        . I mostly use <span className="underline">TypeScript, NextJS & </span>
-        <br />
-        Tailwind CSS.
+        {t.rich('line1', {
+          bold: (chunks) => <span className="font-bold">{chunks}</span>,
+        })}{' '}
+        {t.rich('line2', {
+          italic: (chunks) => <span className="italic">{chunks}</span>,
+        })}{' '}
+        {t.rich('line3', {
+          underline: (chunks) => <span className="underline">{chunks}</span>,
+          br: () => <br />,
+        })}
       </motion.h1>
 
       <motion.div
@@ -89,7 +90,7 @@ export default function Intro() {
             setTimeOfLastClick(Date.now());
           }}
         >
-          Contact me here{' '}
+          {t('contactButton')}{' '}
           <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition" />
         </Link>
         <a
@@ -97,8 +98,8 @@ export default function Intro() {
           href="/CV_VadimKim.pdf"
           download
         >
-          Download CV{' '}
-          <HiDownload className="opacity-60 group-hover:translate-y-1 transition" />
+          {t('downloadCvButton')}{' '}
+          <HiDownload className="opacity-60 group-hover:translate-y-1 transition border-none" />
         </a>
 
         <a
@@ -106,7 +107,7 @@ export default function Intro() {
           href="https://www.linkedin.com/in/kim-vadim/"
           target="_blank"
         >
-          <BsLinkedin />
+          <BsLinkedin className="border-none"/>
         </a>
 
         <a
@@ -114,7 +115,7 @@ export default function Intro() {
           href="https://github.com/vadimkim0203"
           target="_blank"
         >
-          <FaGithubSquare />
+          <FaGithubSquare className="border-none"/>
         </a>
       </motion.div>
     </section>
