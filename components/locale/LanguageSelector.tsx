@@ -1,64 +1,38 @@
 'use client';
 
-import { useRouter } from 'next/navigation';
+import { usePathname, useRouter } from '../../src/i18n/navigation';
 import { useLocale } from 'next-intl';
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from '@/components/ui/select';
+import { RiEnglishInput } from 'react-icons/ri';
+import { TbAlphabetKorean } from 'react-icons/tb';
 
-export const languages = [
-  { code: 'en', name: 'English', flag: '🇺🇸' },
-  { code: 'kr', name: '한국어', flag: '🇰🇷' },
+const languages = [
+  {
+    code: 'en',
+    logo: <RiEnglishInput />,
+  },
+  { code: 'ko', logo: <TbAlphabetKorean /> },
 ];
 
 export default function LanguageSelector() {
   const router = useRouter();
   const currentLocale = useLocale();
+  const pathname = usePathname();
 
-  const handleLanguageChange = (locale: string) => {
-    router.push(`/${locale}`);
+  const currentIndex = languages.findIndex(
+    (lang) => lang.code === currentLocale,
+  );
+  const nextLanguage = languages[(currentIndex + 1) % languages.length];
+  const handleLanguageChange = () => {
+    router.replace(pathname, { locale: nextLanguage.code });
   };
 
-  const currentLanguage = languages.find(
-    (language) => language.code === currentLocale,
-  );
-
   return (
-    <Select value={currentLocale} onValueChange={handleLanguageChange}>
-      <SelectTrigger
-        className=" w-[140px] backdrop-blur-[0.5rem] bg-white bg-opacity-80 shadow-lg dark:bg-gray-950"
-        aria-label="select language"
-        onFocus={(e) => {
-          e.target.scrollIntoView({ block: 'nearest', behavior: 'auto' });
-        }}
-        
-      >
-        <SelectValue>
-          <div className="flex items-center gap-2">
-            <span className="text-base">
-              {currentLanguage?.flag}
-            </span>
-            <span className="text-sm">{currentLanguage?.name}</span>
-          </div>
-        </SelectValue>
-      </SelectTrigger>
-
-      <SelectContent side="bottom" >
-        {languages.map((language) => (
-          <SelectItem key={language.code} value={language.code}>
-            <div className="flex items-center gap-1">
-              <span className="text-base" >
-                {language.flag}
-              </span>
-              <span className="text-sm">{language.name}</span>
-            </div>
-          </SelectItem>
-        ))}
-      </SelectContent>
-    </Select>
+    <button
+      className="fixed bottom-20 right-5 bg-white w-[3rem] h-[3rem] bg-opacity-80 backdrop-blur-[0.5rem] border border-white border-opacity-40 shadow-2xl rounded-full flex items-center justify-center hover:scale-[1.15] active:scale-105 transition-all dark:bg-gray-950"
+      onClick={handleLanguageChange}
+      aria-label={`Switch to ${nextLanguage.code}`}
+    >
+      {nextLanguage.logo}
+    </button>
   );
 }

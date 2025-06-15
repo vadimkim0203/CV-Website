@@ -6,20 +6,10 @@ import { links } from '@/lib/data';
 import Link from 'next/link';
 import clsx from 'clsx';
 import { useActiveSectionContext } from '@/context/active-section-context';
-// import {
-//   Select,
-//   SelectContent,
-//   SelectGroup,
-//   SelectItem,
-//   SelectLabel,
-//   SelectTrigger,
-//   SelectValue,
-// } from './ui/select';
-// import { Languages } from 'lucide-react';
-import LanguageSelector from './locale/LanguageSelector';
-import LanguageSelectorPortal from './locale/LanguageSelectorPortal';
+import { useTranslations } from 'next-intl';
 
 export default function Header() {
+  const t = useTranslations('nav');
   const { activeSection, setActiveSection, setTimeOfLastClick } =
     useActiveSectionContext();
 
@@ -54,7 +44,7 @@ export default function Header() {
                   setTimeOfLastClick(Date.now());
                 }}
               >
-                {link.name}
+                {t(`${link.name}`)}
 
                 {link.name === activeSection && (
                   <motion.span
@@ -72,7 +62,6 @@ export default function Header() {
           ))}
         </ul>
       </nav>
-      <LanguageSelectorPortal/>
     </header>
   );
 }

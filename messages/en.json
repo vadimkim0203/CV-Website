@@ -1,3 +1,26 @@
-{"about":{
-    "after": "After graduating with a degree in"
-}}
+{
+  "nav": {
+    "Home": "Home",
+    "About": "About",
+    "Projects": "Projects",
+    "Skills": "Skills",
+    "Experience": "Experience",
+    "Contact": "Contact"
+  },
+  "intro": {
+    "line1": "<bold>Hi there! My name is Vadim Kim.</bold> I'm a <bold>frontend developer</bold> backed by a strong foundation in <bold>retail and B2B service</bold>.",
+    "line2": "I'm skilled in <italic>understanding user needs, solving problems, and delivering practical solutions</italic>.",
+    "line3": "I mostly use <underline>TypeScript, NextJS</underline> and Tailwind CSS.",
+    "contactButton": "Contact me here ",
+    "downloadCvButton": "Download CV "
+  },
+  "about": {
+    "title": "About Me",
+    "paragraph1": "After graduating with a degree in <degree>Political science</degree>, I spent 7 years at Uniqlo, working my way up to <position>store manager</position>. Later, I moved into the <industry>Korean skincare industry as a sales manager</industry>, where I discovered an interest in web development. I <learning>started learning to code</learning> and completed multiple free courses and bootcamps. <favorite>My favorite part of programming</favorite> is the problem-solving aspect. I <love>love</love> the feeling of finally figuring out a solution to a problem. My core stack includes <stack>TypeScript, TailwindCSS and Docker</stack>. I am also familiar with NextJS and Supabase, and I am always looking to learn new technologies. <seeking>I am currently seeking a full-time position as a frontend developer</seeking> to continue building my skills and experience.",
+    "paragraph2": "<notCoding>When I'm not coding</notCoding>, I love listening to music 🎼, traveling the world 🌎, and exploring new culinary concepts 🍣. I also enjoy <learning>learning new things</learning> and am currently diving into <studying>fashion and design</studying>."
+  },
+  "contact": {
+    "Header": "About me",
+    "Please": "Please contact me at"
+  }
+}
