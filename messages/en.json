@@ -22,5 +22,8 @@
   "contact": {
     "Header": "About me",
     "Please": "Please contact me at"
+  },
+  "myProjects": {
+    "Header": "My Projects"
   }
 }
