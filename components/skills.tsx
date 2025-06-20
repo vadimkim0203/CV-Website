@@ -2,7 +2,7 @@
 
 import React from 'react';
 import SectionHeading from './section-heading';
-import { skillsData, skillColors } from '@/lib/data';
+import { skillsData } from '@/lib/data';
 import { useSectionInView } from '@/lib/hooks';
 import { motion } from 'framer-motion';
 
@@ -31,7 +31,7 @@ export default function Skills() {
       <ul className="flex flex-wrap justify-center gap-2 text-lg text-gray-800">
         {skillsData.map((skill, index) => (
           <motion.li
-            className={`border borderBlack rounded-xl px-5 py-3 dark:text-white/80 ${skillColors[index % skillColors.length]} dark:bg-opacity-20 transition-colors duration-200`}
+            className={`backdrop-blur-sm bg-white/10 border border-white/30 shadow-lg rounded-xl px-5 py-3 dark:text-white/80  dark:bg-opacity-20 transition-colors duration-200`}
             key={index}
             variants={fadeInAnimationVariants}
             initial="initial"

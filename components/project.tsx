@@ -5,16 +5,14 @@ import { projectsData } from '@/lib/data';
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion, useScroll, useTransform } from 'framer-motion';
+import { useLocale } from 'next-intl';
 
 type ProjectProps = (typeof projectsData)[number];
 
-export default function Project({
-  title,
-  description,
-  tags,
-  imageUrl,
-  imageLink,
-}: ProjectProps) {
+export default function Project(project: ProjectProps) {
+  const locale = useLocale() as 'en' | 'ko';
+  const { translations, tags, imageUrl, imageLink } = project;
+  const { title, description } = translations[locale];
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: ref,
