@@ -5,7 +5,7 @@ import SectionHeading from './section-heading';
 import { projectsData } from '@/lib/data';
 import Project from './project';
 import { useSectionInView } from '@/lib/hooks';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 
 export default function Projects() {
   const t = useTranslations('myProjects');
